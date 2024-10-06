@@ -3,6 +3,15 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+span {
+	cursor: auto;
+}
+a {
+	cursor: pointer;
+}
+button {
+	cursor: pointer;
+}
 
 body {
 	font-family: Roboto;
@@ -98,26 +107,28 @@ form {
 } */
 
 #swiper-slide_one {
-	background-image: url('/bg_1.jpg');
+	background-image: url('https://images.uzum.uz/crl79s9bjcvd8a777pe0/main_page_banner.jpg');
 	border-radius: 25px;
-	height: 480px;
+	height: 474px;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
 #swiper-slide_two {
-	background-image: url('/bg_2.jpg');
+	background-image: url('https://images.uzum.uz/crn7p1ijot51rkb29nj0/main_page_banner.jpg');
 	border-radius: 25px;
-	height: 480px;
+	height: 474px;
+
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 #swiper-slide_three {
-	background-image: url('/bg_3.jpg');
+	background-image: url('https://images.uzum.uz/crq0vsevip07shn65p5g/main_page_banner.jpg');
 	border-radius: 25px;
-	height: 480px;
+	height: 474px;
+
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -125,4 +136,224 @@ form {
 
 .popular {
 	margin-top: 50px;
+}
+
+.box_thing {
+	margin-top: 30px;
+
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+
+	gap: 30px;
+}
+
+.shop_thing {
+	width: 230px;
+	height: 390px;
+	/* border: 1px solid black; */
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 25px;
+}
+
+.img_thing {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #3637401a;
+	margin-bottom: 10px;
+	border-radius: 12px;
+}
+.div_for_img img {
+	max-width: 240px;
+	transition: transform 0.3s ease-in-out;
+}
+
+.photo {
+	height: 270px;
+}
+/* .div_for_img img:hover {
+	transform: scale(1.01);
+} */
+
+.text_thing {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.name_thing {
+	font-size: 14px;
+	color: #000000;
+}
+
+.rassrochka_thing {
+	font-size: 14px;
+	background-color: yellow;
+	color: black;
+	width: 110px;
+	padding: 2px;
+}
+
+.price_fake {
+	margin-top: 12px;
+	font-size: 12px;
+	color: #acacac;
+	text-decoration: line-through;
+}
+
+.really_price {
+	font-size: 15px;
+	color: #000000;
+}
+.one_line {
+	display: flex;
+	align-items: center;
+	gap: 160px;
+}
+
+.like {
+	
+	position: relative;
+	top: -110px;
+	left:  210px;
+	
+}
+
+
+#plus_twenty {
+	width: 500px;
+	height: 50px;
+	margin-top: 25px;
+	position: relative;
+	left: 30%;
+	background-color: #3637401a;
+	border: none;
+	border-radius: 10px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#close_twenty {
+	width: 500px;
+	height: 50px;
+	margin-top: 25px;
+	position: relative;
+	left: 30%;
+	background-color: #3637401a;
+	border: none;
+	border-radius: 10px;
+	font-size: 16px;
+	font-weight: bold;
+	display: none;
+}
+
+.banner_img {
+	margin-top: 50px;
+}
+.banner {
+	max-width: 100%;
+	border-radius: 12px;
+	transition: transform 0.3s ease-in-out;
+}
+
+.banner:hover {
+	transform: scale(1.05);
+}
+
+.sale_thing {
+	margin-top: 30px;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 30px;
+}
+
+.good_thing {
+	margin-top: 30px;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 30px;
+}
+
+.end_bio {
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.end_bio a {
+	font-size: 12px;
+	color: #8b8e99;
+	text-decoration: none;
+}
+
+.end_bio span {
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.about_us {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.user {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.for_person {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.apps {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.apps_save {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 20px;
+}
+
+.social {
+	display: flex;
+	gap: 15px;
+	margin-bottom: 60px;
+}
+
+.litenziya {
+	border-top: 0.8px solid #8b8e99;
+	padding-top: 15px;
+	margin-bottom: 150px;
+}
+
+.litenziya a {
+	font-size: 14px;
+	color: black;
+	font-weight: 500;
+	text-decoration: none;
+	padding-right: 15px;
+}
+
+.litenziya span {
+	font-size: 12px;
+	color: #8b8e99;
+	padding-left: 370px;
+}
+
+.my_dream {
+	margin-top: 30px;
+	font-size: 1.5rem;
+	font-weight: 420;
+	color: #1f2026;
+	padding-bottom: 15px;
+	border-bottom: 0.5px solid #1f2026;
 }

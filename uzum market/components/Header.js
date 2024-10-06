@@ -71,5 +71,15 @@ export function Header(item) {
 	div_savebox.append(save_box_img, span_save_box)
 	div_binbox.append(bin_box_img, span_bin_box)
 
+	div_savebox.onclick = () => {
+		location.href = '/pages/selected/'
+	}
+	div_binbox.onclick = () => {
+		location.href = '/pages/korzina/'
+	}
+
+	
+	
+
 	return head
 }
