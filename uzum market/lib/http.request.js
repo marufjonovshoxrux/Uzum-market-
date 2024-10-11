@@ -9,12 +9,7 @@ export class ApiCall {
 	async getData(path) {
 		try {
 			const res = await axios.get(
-				this.url + path /*, {
-				headers: {
-					apikey: this.apikey
-				},
-				params: params
-			} */
+				this.url + path 
 			)
 
 			if (res.status !== 200) {

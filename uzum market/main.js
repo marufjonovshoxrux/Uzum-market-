@@ -7,9 +7,14 @@ import { ApiCall } from './lib/http.request.js'
 const apiCall = new ApiCall(import.meta.env.VITE_BASE_URL)
 const products = await apiCall.getData('/products')
 const data = products.slice(0, 10)
-const sale_products = products.slice(10,20)
-const good_products = products.slice(20,30)
+const sale_products = products.slice(10, 20)
+const good_products = products.slice(20, 30)
+console.log(products)
 
+const beauty = document.querySelector('.beauty')
+const furniture = document.querySelector('.furniture')
+const groceries = document.querySelector('.groceries')
+const fragrances = document.querySelector('.fragrances')
 
 const plus_twenty = document.querySelector('#plus_twenty')
 const close_twenty = document.querySelector('#close_twenty')
@@ -18,19 +23,15 @@ const promokod = document.querySelector('#promokod')
 const good_price = document.querySelector('#good_price')
 const good_thing = document.querySelector('.good_thing')
 
-
-
-
-
 const header = document.querySelector('header')
 const swiperslide_one = document.querySelector('#swiper-slide_one')
 const swiperslide_two = document.querySelector('#swiper-slide_two')
 const swiperslide_three = document.querySelector('#swiper-slide_three')
 const box_thing = document.querySelector('.box_thing')
+const form = document.forms.namedItem('search_form')
 
 good_price.onclick = () => {
 	location.href = 'https://uzum.uz/ru/category/vygodnaya-rassrochka--545'
-
 }
 promokod.onclick = () => {
 	location.href = 'https://uzum.uz/ru/category/luchshaya-cena--502'
@@ -70,6 +71,30 @@ close_twenty.onclick = () => {
 
 	close_twenty.style.display = 'none'
 	plus_twenty.style.display = 'block'
+}
+beauty.onclick = () => {
+	const beauty = products.slice(0, 10)
+	localStorage.setItem('beauty', JSON.stringify(beauty))
+
+	location.assign('/pages/products/')
+}
+
+fragrances.onclick = () => {
+	const fragrance = products.slice(6, 11)
+	localStorage.setItem('fragrances', JSON.stringify(fragrance))
+	location.assign('/pages/products/')
+}
+
+furniture.onclick = () => {
+	const furniture = products.slice(10, 15)
+	localStorage.setItem('furniture', JSON.stringify(furniture))
+	location.assign('/pages/products/')
+}
+
+groceries.onclick = () => {
+	const groceries = products.slice(16, 30)
+	localStorage.setItem('groceries', JSON.stringify(groceries))
+	location.assign('/pages/products/')
 }
 
 reload(good_products, good_thing, Thing)

@@ -3,19 +3,23 @@
 	<head>
 		<meta charset="UTF-8" />
 		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<script defer src="../../lib/police.js"></script>
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./style.css" />
-		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+		<title>Товары</title>
+		<link rel="stylesheet" href="../../style.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet"
+		/>
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 		/>
-
-		<title>Uzum Market</title>
 	</head>
 	<body>
-		<div class="container">
-			<header></header>
+        <div class="container">
+            <header></header>
 			<dialog>
 				<div class="category_two">
 					<span>Категории товаров</span>
@@ -29,55 +33,13 @@
 				</div>
 			</dialog>
 			<div class="backdrop"></div>
-			<div class="swiper">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide" id="swiper-slide_one">
-						<!-- <img src="/bg_1.png" alt=""> -->
-					</div>
-					<div class="swiper-slide" id="swiper-slide_two"></div>
-					<div class="swiper-slide" id="swiper-slide_three"></div>
-				</div>
+            <div class="box_thing2"></div>
 
-				<div class="swiper-pagination"></div>
-
-				<div class="swiper-button-prev"></div>
-				<div class="swiper-button-next"></div>
+			<div class="nothing">
+				<img src="/nothing.png" alt="nothing">
+				<span class="nothing_text">Нет такого товара</span>
+				<span class="nothing_text2">Перейдите на главную страницу</span>
 			</div>
-
-			<h1 class="popular">Популярное</h1>
-
-			<div class="box_thing"></div>
-
-			
-
-			<button id="plus_twenty">Показать еще 20</button>
-			<button id="close_twenty">Скрыть</button>
-
-			<div class="banner_img">
-				<img
-					src="https://images.uzum.uz/crmhpaajot51rkb24kn0/main_page_banner.jpg"
-					alt="banner"
-					class="banner"
-					id="promokod"
-				/>
-			</div>
-
-			<h1 class="popular">Распродажа</h1>
-
-			<div class="sale_thing"></div>
-
-			<div class="banner_img">
-				<img
-					src="https://images.uzum.uz/crn8neijot51rkb2a3ag/main_page_banner.jpg"
-					alt="banner"
-					class="banner"
-					id="good_price"
-				/>
-			</div>
-			
-			<h1 class="popular">Выгодная цена</h1>
-
-			<div class="good_thing"></div>
 
 			<div class="end_bio">
 				<div class="about_us">
@@ -119,9 +81,9 @@
 				<a href="">Пользовательское соглашение</a>
 				<span>«2024© ООО «UZUM MARKET». ИНН 309376127. Все права защищены»</span>
 			</div>
-		</div>
+        </div>
 
-		<script type="module" src="./main.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-	</body>
+
+		<script type="module" src="index.js"></script>
+    </body>
 </html>

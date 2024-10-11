@@ -1,26 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-	<link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Товар</title>
-    <link rel="stylesheet" href="../../style.css" />
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script defer src="../../lib/police.js"></script>
+
+		<title>Товар</title>
+		<link rel="stylesheet" href="../../style.css" />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
 			rel="stylesheet"
 		/>
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 		/>
-</head>
-<body>
-    <div class="container">
-        <header></header>
+	</head>
+	<body>
+		<div class="container">
+			<header></header>
+			<dialog>
+				
+				<div class="category_two">
+					<span>Категории товаров</span>
+				<div class="category_span">
+					<span class="beauty">Красота</span>
+					<span class="fragrances">Духи</span>
+					<span class="furniture">Мебель</span>
+					<span class="groceries">Продукты</span>
 
-    </div>
+				</div>
+				</div>
+			</dialog>
+			<div class="backdrop"></div>
+			<div class="product_div">
+				<div class="product_one">
+					<h1 class="name-product">loading...</h1>
 
-    <script type="module" src="index.js"></script>
-</body>
+					<div class="product-card">
+						<div class="slider">
+							<div class="slides">
+								<img src="https://img.freepik.com/premium-photo/white-wall-with-white-background-that-says-word-it_994023-371201.jpg" alt="" class="img-1" />
+								<img src="https://img.freepik.com/premium-photo/white-wall-with-white-background-that-says-word-it_994023-371201.jpg" alt="" class="img-2"/>
+								
+							</div>
+							<div class="thumbnails">
+								<img
+									src=""
+									alt=""
+									
+									class="min-img-1"
+								/>
+								<img
+									src="https://img.freepik.com/premium-photo/white-wall-with-white-background-that-says-word-it_994023-371201.jpg"
+									alt=""
+									
+									class="min-img-2"
+
+								/>
+								<img
+									src="https://img.freepik.com/premium-photo/white-wall-with-white-background-that-says-word-it_994023-371201.jpg"
+									alt=""
+									
+									class="min-img-3"
+
+								/>
+							</div>
+						</div>
+					</div>
+					<div class="over_product">
+						<span class="people_band"></span>
+						<div class="star-rating">
+							<div class="stars"></div>
+						</div>
+						<a href="#" class="lenght_comment"></a>
+					</div>
+					<div class="product-comment"></div>
+
+					<button class="see_comments">Смотреть все отзывы</button>
+					<button class="not_see_comments">Скрыть</button>
+
+					<h1 style="margin-top: 30px; margin-bottom: 12px">Описание</h1>
+					<span class="info_product"> </span>
+				</div>
+				<div class="product_two">
+					<div class="price_bio">
+						<span class="price">loading...</span>
+						<button class="rassrochka">
+							<span
+								style="background-color: yellow"
+								class="rassrochka_span"
+							></span>
+						</button>
+						<div style="display: flex; gap: 15px">
+							<button class="buy_onclick">Купить в 1 клик</button>
+							<button class="save_two">
+								<svg
+									data-v-20837234=""
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+									class="ui-icon"
+								>
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M12.5919 6.30776C12.2745 6.65691 11.7254 6.65691 11.408 6.30776L10.2557 5.04022C8.6211 3.24213 5.83833 3.10961 4.04023 4.74424C3.0663 5.62964 2.64186 6.44801 2.48982 7.16768C2.33552 7.89804 2.42836 8.68672 2.76 9.55775C3.45133 11.3735 5.03708 13.2026 6.65581 14.8936C7.93664 16.2316 10.5544 18.1907 12 19.2358C13.4456 18.1907 16.0633 16.2316 17.3442 14.8936C18.9629 13.2026 20.5487 11.3735 21.24 9.55775C21.5716 8.68672 21.6645 7.89804 21.5102 7.16768C21.3581 6.44801 20.9337 5.62964 19.9598 4.74424C18.1617 3.10961 15.3789 3.24213 13.7443 5.04022L12.5919 6.30776ZM13.1142 3.4274C15.3783 1.49848 18.777 1.50669 21.036 3.56034C25.7404 7.83707 21.7083 12.6483 18.5 16C17.0185 17.5477 14.0224 19.7548 12.6788 20.7186C12.2712 21.0111 11.7288 21.0111 11.3212 20.7186C9.97757 19.7548 6.98153 17.5477 5.5 16C2.29168 12.6483 -1.74043 7.83706 2.96396 3.56034C5.22297 1.50669 8.62173 1.49848 10.8858 3.4274C11.0792 3.59214 11.2642 3.77101 11.4396 3.96394L12 4.58034L12.5604 3.96394C12.7357 3.77101 12.9208 3.59214 13.1142 3.4274Z"
+										fill="black"
+									></path>
+								</svg>
+							</button>
+						</div>
+						<button class="add_basket">Добавить в корзина</button>
+					</div>
+				</div>
+			</div>
+
+			<h1>Похожие товары</h1>
+
+			<div class="product_type"></div>
+
+			<div class="end_bio">
+				<div class="about_us">
+					<span class="about_1">О нас</span>
+					<a href="https://uzum.uz/ru/about/delivery-points">Пункты выдачи</a>
+					<a href="https://uzum.uz/ru/about/careers">Вакансии</a>
+				</div>
+				<div class="user">
+					<span>Пользователям</span>
+					<a href="https://uzum.uz/ru#contacts">Связаться с нами</a>
+					<a href="https://uzum.uz/ru/faq">Вопрос - Ответ</a>
+				</div>
+				<div class="for_person">
+					<span>Для предпринимателей</span>
+					<a href="https://seller.uzum.uz/">Продавайте на Uzum</a>
+					<a href="https://seller.uzum.uz/seller/signin">Вход для продавцов</a>
+				</div>
+				<div class="apps">
+					<span>Скачать приложение</span>
+					<div class="apps_save">
+						<img src="/googleplay.svg" alt="google_play" />
+						<span>Google Play</span>
+						<img src="/apple.svg" alt="app store" />
+						<span>AppStore</span>
+					</div>
+
+					<span>Uzum в соцсетях</span>
+					<div class="social">
+						<img src="/instagram.svg" alt="instagram" />
+						<img src="/telegram.svg" alt="telegram" />
+						<img src="/facebook.svg" alt="facebook" />
+						<img src="/youtube.svg" alt="youtube" />
+					</div>
+				</div>
+			</div>
+
+			<div class="litenziya">
+				<a href="">Соглашение о конфиденциальности</a>
+				<a href="">Пользовательское соглашение</a>
+				<span>«2024© ООО «UZUM MARKET». ИНН 309376127. Все права защищены»</span>
+			</div>
+		</div>
+
+		<script type="module" src="index.js"></script>
+	</body>
 </html>

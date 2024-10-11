@@ -50,10 +50,12 @@ export function Thing(item) {
 	one_line.append(really_price, img_basket)
 
 	img_photo.onclick = () => {
-		location.href = '/pages/product/'
+		location.assign(`/pages/product/?id=` + item.id)
+
 	}
 	text_thing.onclick = () => {
-		location.href = '/pages/product/'
+		// location.href = '/pages/product/?id=' 
+		location.assign(`/pages/product/?id=` + item.id)
 
 	}
 
