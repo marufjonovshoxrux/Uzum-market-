@@ -19,7 +19,11 @@ const beauty2 = document.querySelector('.beauty')
 const furniture2 = document.querySelector('.furniture')
 const groceries2 = document.querySelector('.groceries')
 const fragrances2 = document.querySelector('.fragrances')
+const btn_page = document.querySelector('.btn_page')
 
+btn_page.onclick = () => {
+	location.assign('/')
+}
 
 if (products == 0) {
 	nothing.style.display = 'flex'

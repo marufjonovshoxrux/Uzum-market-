@@ -31,15 +31,16 @@ const not_see_comments = document.querySelector('.not_see_comments')
 const product_type = document.querySelector('.product_type')
 const thumbnails = document.querySelector('.thumbnails')
 const save_two = document.querySelector('.save_two')
+const save_two_active = document.querySelector('.save_two_active')
 const beauty = document.querySelector('.beauty')
 const furniture = document.querySelector('.furniture')
 const groceries = document.querySelector('.groceries')
 const fragrances = document.querySelector('.fragrances')
+const buy_onclick = document.querySelector('.buy_onclick')
+const sale_price = document.querySelector('.sale_price')
+const rasrochka = document.querySelector('.rassrochka')
+const add_basket = document.querySelector('.add_basket')
 
-save_two.onclick = () => {
-	save_two.innerHTML =
-		'<svg data-v-04a70945="" width="20" height="20" viewBox="0 0 19 16" fill="none"xmlns="http://www.w3.org/2000/svg" alt="like" class="ui-icon "><path d="M5.45 0.169434C8.01792 0.169434 9.5 2.32178 9.5 2.32178C9.5 2.32178 10.985 0.169434 13.55 0.169434C16.205 0.169434 18.5 2.23943 18.5 5.11943C18.5 9.34995 12.0604 13.7892 9.86509 15.7297C9.65819 15.9126 9.34179 15.9126 9.13488 15.7297C6.94056 13.7903 0.5 9.34976 0.5 5.11943C0.5 2.23943 2.795 0.169434 5.45 0.169434Z" fill="#8967F0"></path></svg>'
-}
 if (productId) {
 	await apiCall.getData(`/products/${productId}/`).then(product => {
 		console.log(product)
@@ -60,6 +61,7 @@ if (productId) {
 		lenght_comment.innerHTML = product.reviews.length + ' отзывов'
 		info_product.innerHTML = product.description
 		price.innerHTML = product.price + '$'
+		sale_price.innerHTML = product.dimensions.width + '$'
 		rassrochka.innerHTML = 'от ' + product.discountPercentage + ' $/месяц'
 
 		const comment = product.reviews
@@ -111,6 +113,41 @@ if (productId) {
 			console.log(res)
 		})
 
+		save_two.onclick = () => {
+			localStorage.setItem('things', JSON.stringify([product]))
+
+			save_two.style.display = 'none'
+			save_two_active.style.display = 'block'
+		}
+
+		save_two_active.onclick = () => {
+			localStorage.removeItem('things', JSON.stringify([product]))
+
+			save_two.style.display = 'block'
+			save_two_active.style.display = 'none'
+		}
+		likeSave(product.id)
+		async function likeSave(itemID) {
+			const things = JSON.parse(localStorage.getItem('things')) || []
+			const isLiked = things.some(e => e.id === itemID)
+
+			if (isLiked) {
+				save_two.style.display = 'none'
+				save_two_active.style.display = 'block'
+			} else {
+				save_two.style.display = 'block'
+				save_two_active.style.display = 'none'
+			}
+		}
+
+		add_basket.onclick = () => {
+			let items = JSON.parse(localStorage.getItem('korzina')) || []
+
+			items.push(product)
+
+			localStorage.setItem('korzina', JSON.stringify(items))
+		}
+
 		reload(data, product_comment, Comment)
 		reload(data_two, product_comment, Comment)
 	})
@@ -140,6 +177,13 @@ groceries.onclick = () => {
 	const groceries = products.slice(16, 30)
 	localStorage.setItem('groceries', JSON.stringify(groceries))
 	location.assign('/pages/products/')
+}
+
+buy_onclick.onclick = () => {
+	location.href = 'https://uzum.uz/ru/checkout'
+}
+rasrochka.onclick = () => {
+	location.href = 'https://uzum.uz/ru/promo/installment'
 }
 
 reload([{}], header, Header)

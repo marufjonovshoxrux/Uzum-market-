@@ -4,6 +4,7 @@ import { reload } from './lib/utils.js'
 import { Thing } from './components/Thing.js'
 import { ApiCall } from './lib/http.request.js'
 
+
 const apiCall = new ApiCall(import.meta.env.VITE_BASE_URL)
 const products = await apiCall.getData('/products')
 const data = products.slice(0, 10)
@@ -15,7 +16,6 @@ const beauty = document.querySelector('.beauty')
 const furniture = document.querySelector('.furniture')
 const groceries = document.querySelector('.groceries')
 const fragrances = document.querySelector('.fragrances')
-
 const plus_twenty = document.querySelector('#plus_twenty')
 const close_twenty = document.querySelector('#close_twenty')
 const sale_thing = document.querySelector('.sale_thing')
@@ -72,6 +72,7 @@ close_twenty.onclick = () => {
 	close_twenty.style.display = 'none'
 	plus_twenty.style.display = 'block'
 }
+
 beauty.onclick = () => {
 	const beauty = products.slice(0, 10)
 	localStorage.setItem('beauty', JSON.stringify(beauty))

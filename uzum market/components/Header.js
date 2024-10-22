@@ -90,30 +90,8 @@ export function Header(item) {
 		location.href = '/pages/korzina/'
 	}
 
-	div_userbox.onmouseenter = () => {
-		div_userbox.style.backgroundColor = '#dbdbdb'
-	}
-
-	div_userbox.onmouseout = () => {
-		div_userbox.style.backgroundColor = 'white'
-	}
-
-	div_savebox.onmouseenter = () => {
-		div_savebox.style.backgroundColor = '#dbdbdb'
-	}
-
-	div_savebox.onmouseout = () => {
-		div_savebox.style.backgroundColor = 'white'
-	}
-
-	div_binbox.onmouseenter = () => {
-		div_binbox.style.backgroundColor = '#dbdbdb'
-	}
-
-	div_binbox.onmouseout = () => {
-		div_binbox.style.backgroundColor = 'white'
-	}
-
+	
+	
 	img_logo.onclick = () => {
 		location.assign('/')
 	}

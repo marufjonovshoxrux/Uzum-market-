@@ -1798,14 +1798,6 @@
     }
   ],
   "users": [
-    {
-      "id": "cda456eb-0611-4455-a73b-5782452b30ee",
-      "createdAt": "2024-10-10T05:10:30.085Z",
-      "updateAt": "2024-10-10T05:10:30.085Z",
-      "email": "shokha0502@gmail.com",
-      "names": "Shoxrux",
-      "surname": "Marufjonov",
-      "password": "8613"
-    }
+    
   ]
 }
