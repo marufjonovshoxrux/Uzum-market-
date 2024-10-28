@@ -4,7 +4,6 @@ import { reload } from './lib/utils.js'
 import { Thing } from './components/Thing.js'
 import { ApiCall } from './lib/http.request.js'
 
-
 const apiCall = new ApiCall(import.meta.env.VITE_BASE_URL)
 const products = await apiCall.getData('/products')
 const data = products.slice(0, 10)
